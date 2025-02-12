@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "a3f46c33-eca4-4f90-a274-539be6208a27",
+		"name": "Crop Advisory System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32595916"
+	},
+	"item": [
+		{
+			"name": "DB post request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"location\": \"Mumbai\",\r\n    \"soilType\": \"Clay\",\r\n    \"weatherConditions\": \"Sunny\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/farmers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"farmers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DB get request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/farmers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"farmers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
