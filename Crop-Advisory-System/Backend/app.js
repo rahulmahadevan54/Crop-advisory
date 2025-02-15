@@ -7,6 +7,18 @@ const cors = require('cors');
 
 mongoose.connect('mongodb://localhost/crop-advisory-system', { useNewUrlParser: true, useUnifiedTopology: true });
 
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose connected to MongoDB');
+});
+
+mongoose.connection.on('error', (err) => {
+    console.error('Mongoose connection error:', err);
+});
+
+mongoose.connection.on('disconnected', () => {
+    console.log('Mongoose disconnected from MongoDB');
+});
+
 app.use(express.json());
 app.use(cors());
 
